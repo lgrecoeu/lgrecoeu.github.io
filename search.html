@@ -1,0 +1,18 @@
+---
+layout: bare
+name: search
+lang: en
+html_title: Search results
+permalink: /search/
+---
+<div id="main" class="col-sm-12 clearfix" role="main">
+    <article class="clearfix" role="article">
+        {% include searchbar.html %}
+        <section class="post_content row">
+            <div class="col-sm-12">
+                <div id='cse' data-lang="{{page.lang}}" data-key="{{site.google_search}}"><img src="{{site.url}}/css/loading.gif"/></div>
+                <gcse:searchresults-only noResultsString="No results found. Please try changing the search terms."></gcse:searchresults-only>
+            </div>
+        </section>
+    </article>
+</div>

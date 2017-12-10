@@ -1,0 +1,19 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% if page.html_title %}{{ page.html_title }} - {% endif %}{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/lgreco.css">
+    <link rel="stylesheet" href="{{ site.url }}/js/lightbox/lightbox.css">
+
+    <link rel="icon" type="image/x-icon" href="{{ site.url }}/favicon.ico"/>
+    {% assign posts=site.posts | where:"name", page.name %}
+    <!-- link alternate translations of the same content -->
+    {% for post in posts %}
+    {% if post.lang != page.lang %}
+    <link rel="alternate" hreflang="{{post.lang}}" href="{{post.url}}" />
+    {% endif %}
+    {% endfor %}
+</head>

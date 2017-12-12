@@ -154,3 +154,10 @@ a.gsc-trailing-more-results:link {
 .gs-promotion .gs-visibleUrl, .gs-promotion .gs-visibleUrl-short {
     color: #008000;
 }
+
+#adBlock{
+	height: 0;
+	width: 0;
+	background-color: #fafafa
+	border: 0;
+}
